@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#The scripts writes best schoool on the terminal using the while loop...
+count=1
+while [ $count -le 10 ]; do
+  echo "Best School"
+  ((count++))  
+done
