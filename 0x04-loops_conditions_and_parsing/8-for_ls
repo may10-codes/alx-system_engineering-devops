@@ -5,10 +5,13 @@
  #In a list format
 #Where only the part of the name after the first dash is displaye
 
-for file in *; do
-  
-  if [[ "$file" == *"-"* ]]; then
-    
+
+
+for file in *
+do
+  if [[ -f "$file" && "$file" != .* ]]; then
+    name_after_dash="${file#*-}"
+    echo "$name_after_dash"
   fi
 done
 
